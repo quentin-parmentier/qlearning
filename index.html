@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+
+        <div id="jeu"></div>
+
+        <div id="infos">
+            <div id="controler">
+                <div class='etage action' id="haut"></div>
+                <div class='etage' id="milieu">
+                    <div class="midAction action" id="gauche"></div>
+                    <div class="midAction action" id="action"> <button id="train">Explore</button> </div>
+                    <div class="midAction action" id="droite"></div>
+                </div>
+                <div class='etage action' id="bas"></div>
+            </div>
+
+            <button id="step"> 1 Step </button>
+        </div>
+
+    </div>
+</body>
+
+<script src="jeu.js"></script>
+<style>
+    
+    #container {
+        display: flex;
+    }
+
+    #controler {
+        width: 100%;
+    }
+
+    #infos{
+        flex: 1;
+        padding: 0px 15px;
+    }
+
+    .case {
+        background-image: url("./route.svg");
+        background-size: cover;
+        height: 25%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .travaux {
+        background-image: url("./travaux.svg");
+    }
+
+    .maison {
+        background-image: url("./maison.svg");
+    }
+
+    #player {
+        background-image: url("./voiture.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    .case_info {
+        width: calc(33.33% - 2px);
+        height: 33.33%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: black;
+        font-weight: bold;
+    }
+
+    .etage {
+        width: 100%;
+        height: 100px;
+        display: flex;
+    }
+
+    .midAction{
+        flex: 1;
+    }
+
+    .action{
+        background: no-repeat;
+        object-fit: cover;
+        background-position: center;
+    }
+
+    #jeu {
+        flex: 3;
+        height: 97vh;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    body{
+        margin: 0px
+    }
+
+    #haut{
+        background-image: url("./up-arrow.svg");
+    }
+
+    #gauche{
+        background-image: url("./left-arrow.svg");
+    }
+
+    #droite{
+        background-image: url("./right-arrow.svg");
+    }
+
+    #bas{
+        background-image: url("./down-arrow.svg");
+    }
+
+    #action {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #train {
+        width: 100%;
+        height: 100%;
+    }
+
+    #step {
+        width: 100%;
+        height: 40px;
+    }
+</style>
+</html>

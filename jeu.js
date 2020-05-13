@@ -1,10 +1,10 @@
-const WIDTH = 5;
+const WIDTH = 6;
 const HEIGHT = 4;
 const STATES = WIDTH * HEIGHT;
 const jeu = '#jeu';
 const START = 1;
-const END = 5;
-const BAD_STATES = [9,2]
+const END = 6;
+const BAD_STATES = [9,2,17]
 const wProportion = 100/WIDTH
 const hProportion = 100/HEIGHT
 const size = wProportion/3;
@@ -195,7 +195,7 @@ $(function() {
 
     $('#train').click(() => {
         
-        for (let boucle = 0; boucle < 4; boucle++) {
+        for (let boucle = 0; boucle < 8; boucle++) {
             epsilon = 1
             for (let index = 0; index < 400; index++) {
                 player.avance(epsilon,0);
